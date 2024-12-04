@@ -4,14 +4,24 @@
     <TargetFramework>net9.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <OutputType>Exe</OutputType>
+    <RestoreSources>https://api.nuget.org/v3/index.json</RestoreSources>
+    <Nullable>enable</Nullable>
+    <LangVersion>preview</LangVersion>
+    <EnablePreviewFeatures>true</EnablePreviewFeatures>
+    <PublishAot>true</PublishAot>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <OptimizationPreference>Speed</OptimizationPreference>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="AoCHelper" Version="4.0.0" />
+    <PackageReference Include="BenchmarkDotNet" Version="0.13.10" />
   </ItemGroup>
 
   <PropertyGroup>
     <NoWarn>S101</NoWarn>
+    <TieredPGO>true</TieredPGO>
+    <TieredCompilation>true</TieredCompilation>
   </PropertyGroup>
 
   <ItemGroup>
